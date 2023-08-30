@@ -1,10 +1,5 @@
 {
   "root": true,
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "node": true
-  },
   "extends": [
     "next",
     "prettier"
@@ -69,7 +64,6 @@
         "max": 1,
         "maxBOF": 1
       }
-    ],
-    "prettier/prettier": ["error"]
+    ]
   }
 }
