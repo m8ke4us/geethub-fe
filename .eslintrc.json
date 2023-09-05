@@ -2,8 +2,10 @@
   "root": true,
   "extends": [
     "next",
-    "prettier"
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "plugins": ["@typescript-eslint/eslint-plugin"],
   "rules": {
     "import/order": [
       "error",
@@ -43,7 +45,8 @@
     "no-else-return": "error",
     "no-sequences": "error",
     "no-duplicate-imports": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "no-lonely-if": "error",
     "no-unneeded-ternary": "error",
     "one-var-declaration-per-line": "error",
