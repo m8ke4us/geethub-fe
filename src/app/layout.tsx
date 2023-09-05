@@ -13,10 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const obj = { test: 1 };
-
-  console.log(obj.hi);
-
   return (
     <html lang='en'>
       <body className={inter.className}>{children}</body>
