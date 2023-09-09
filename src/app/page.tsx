@@ -6,16 +6,18 @@ const items: TabProps['items'] = [
   {
     label: 'THIS YEAR',
     value: 'YEAR',
+    children: <p>this year list</p>,
   },
   {
     label: 'THIS MONTH',
     value: 'MONTH',
+    children: <p>this month list</p>,
   },
 ];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="min-h-screen">
       <Tab defaultActiveValue="YEAR" items={items} />
     </main>
   );
