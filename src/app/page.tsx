@@ -1,3 +1,4 @@
+import Avatar from '@/components/Avatar';
 import Tab from '@/components/Tab';
 
 import type { TabProps } from '@/components/Tab';
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Tab defaultActiveValue="YEAR" items={items} />
+      <Avatar path="142975816?s=48&v=4" alt="example avatar" size={30} />
     </main>
   );
 }
