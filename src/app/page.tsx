@@ -1,5 +1,6 @@
 import Avatar from '@/components/Avatar';
 import Tab from '@/components/Tab';
+import Layout from '@/template/Layout';
 
 import type { TabProps } from '@/components/Tab';
 
@@ -18,9 +19,9 @@ const items: TabProps['items'] = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <Layout>
       <Tab defaultActiveValue="YEAR" items={items} />
       <Avatar path="142975816?s=48&v=4" alt="example avatar" size={30} />
-    </main>
+    </Layout>
   );
 }
