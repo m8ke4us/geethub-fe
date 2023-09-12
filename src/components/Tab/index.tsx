@@ -7,7 +7,6 @@ type ItemValue = string;
 interface TabItem extends React.PropsWithChildren {
   label: React.ReactNode;
   value: ItemValue;
-  children?: React.ReactNode;
 }
 export interface TabProps {
   defaultActiveValue: ItemValue;
