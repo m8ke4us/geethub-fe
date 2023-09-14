@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground: theme('colors.neutral.800');
-  --background: theme('colors.stone.100');
+@layer components {
+  .p-layout {
+    @apply p-8 lg:p-4;
+  }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  min-width: theme('screens.minWidth');
+  color: theme('colors.neutral.800');
+  background: theme('colors.stone.100');
 }
