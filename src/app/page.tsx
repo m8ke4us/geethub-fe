@@ -1,6 +1,7 @@
 import Avatar from '@/components/Avatar';
 import Tab from '@/components/Tab';
 import CommitRankList from '@/template/CommitRankList';
+import Layout from '@/template/Layout';
 
 import type { TabProps } from '@/components/Tab';
 import type { CommitRankListProps } from '@/template/CommitRankList';
@@ -60,12 +61,12 @@ export default function Home() {
   const brStyles = 'my-3 h-0.5 w-full bg-neutral-200';
 
   return (
-    <main className="min-h-screen">
+    <Layout>
       <Tab defaultActiveValue="YEAR" items={tabItems} />
       <div className={brStyles} />
       <Avatar path="142975816?s=48&v=4" alt="example avatar" size={30} />
       <div className={brStyles} />
       <CommitRankList items={commitRankItems} />
-    </main>
+    </Layout>
   );
 }
