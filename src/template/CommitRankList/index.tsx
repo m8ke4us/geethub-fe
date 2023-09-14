@@ -11,6 +11,7 @@ interface CommitRankItem {
 }
 export interface CommitRankListProps {
   items: CommitRankItem[];
+  className?: string;
 }
 
 interface RankTextColorType {
@@ -26,7 +27,7 @@ const rankTextColorClasses: RankTextColorType = {
 
 function CommitRankItem({ rank, username, avatarPath, count }: CommitRankItem) {
   return (
-    <li className="mb-4 flex items-center justify-between rounded-md border-2 border-neutral-700 p-4">
+    <li className="mb-4 flex items-center justify-between rounded-md border-2 border-neutral-700 p-4 last:mb-0">
       <div className="flex items-center">
         <span
           className={classnames(
@@ -47,9 +48,9 @@ function CommitRankItem({ rank, username, avatarPath, count }: CommitRankItem) {
   );
 }
 
-function CommitRankList({ items }: CommitRankListProps) {
+function CommitRankList({ items, className }: CommitRankListProps) {
   return (
-    <ul>
+    <ul className={classnames(className)}>
       {items.map((item) => (
         <CommitRankItem key={item.id} {...item} />
       ))}
