@@ -1,4 +1,9 @@
+'use client';
+
+import { useState } from 'react';
+
 import Avatar from '@/components/Avatar';
+import Pagination from '@/components/Pagination';
 import Tab from '@/components/Tab';
 import CommitRankList from '@/template/CommitRankList';
 import Layout from '@/template/Layout';
@@ -59,6 +64,7 @@ const commitRankItems: CommitRankListProps['items'] = [
 
 export default function Home() {
   const brStyles = 'my-3 h-0.5 w-full bg-neutral-200';
+  const [current, setCurrent] = useState(1);
 
   return (
     <Layout>
@@ -67,6 +73,8 @@ export default function Home() {
       <Avatar path="142975816?s=48&v=4" alt="example avatar" size={30} />
       <div className={brStyles} />
       <CommitRankList items={commitRankItems} />
+      <div className={brStyles} />
+      <Pagination total={52} pageSize={10} current={current} onChange={setCurrent} />
     </Layout>
   );
 }
