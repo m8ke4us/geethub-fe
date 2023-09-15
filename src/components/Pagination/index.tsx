@@ -9,6 +9,7 @@ interface PaginationProps {
   current: number;
   onChange: (page: number) => void;
 }
+
 function Pagination({ total, pageSize, current, onChange }: PaginationProps) {
   const totalPage = useMemo(() => Math.ceil(total / pageSize), [total, pageSize]);
 
