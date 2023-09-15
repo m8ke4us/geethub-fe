@@ -1,7 +1,9 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
-function Layout({ children }: React.PropsWithChildren) {
+import type { PropsWithChildren } from 'react';
+
+function Layout({ children }: PropsWithChildren) {
   return (
     <main className="flex min-h-screen flex-col">
       <Header />

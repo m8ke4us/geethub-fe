@@ -3,8 +3,10 @@
 import classnames from 'classnames';
 import React, { useMemo, useState } from 'react';
 
+import type { PropsWithChildren } from 'react';
+
 type ItemValue = string;
-interface TabItem extends React.PropsWithChildren {
+interface TabItem extends PropsWithChildren {
   label: React.ReactNode;
   value: ItemValue;
 }
@@ -13,6 +15,7 @@ export interface TabProps {
   items: TabItem[];
   onChange?: (value: ItemValue) => void;
 }
+
 export default function Tab({ defaultActiveValue, items, onChange }: TabProps) {
   const [activeValue, setActiveValue] = useState(defaultActiveValue);
   const activeChildren = useMemo(

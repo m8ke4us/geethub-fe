@@ -2,6 +2,9 @@ import classnames from 'classnames';
 
 import Avatar from '@/components/Avatar';
 
+interface RankTextColorClasses {
+  [key: string]: string;
+}
 interface CommitRankItem {
   id: string;
   rank: number;
@@ -14,11 +17,7 @@ export interface CommitRankListProps {
   className?: string;
 }
 
-interface RankTextColorType {
-  [key: string]: string;
-}
-
-const rankTextColorClasses: RankTextColorType = {
+const rankTextColorClasses: RankTextColorClasses = {
   1: 'text-amber-400',
   2: 'text-emerald-600',
   3: 'text-violet-600',
