@@ -1,10 +1,10 @@
 'use client';
 
-import axios from 'axios';
 import { useState } from 'react';
 
 import Pagination from '@/components/Pagination';
 import Tab from '@/components/Tab';
+import { useGetCommitRanks } from '@/hooks/queries';
 import CommitRankList from '@/template/CommitRankList';
 import Layout from '@/template/Layout';
 
@@ -63,11 +63,8 @@ const commitRankItems: CommitRankListProps['items'] = [
 export default function Home() {
   const [current, setCurrent] = useState(1);
 
-  const getRankList = () => {
-    axios.get('/api/rank').then((res) => console.log(res));
-  };
-
-  getRankList();
+  const { data, isLoading } = useGetCommitRanks();
+  console.log(isLoading, data);
 
   return (
     <Layout>
