@@ -1,5 +1,6 @@
 'use client';
 
+import axios from 'axios';
 import { useState } from 'react';
 
 import Pagination from '@/components/Pagination';
@@ -61,6 +62,12 @@ const commitRankItems: CommitRankListProps['items'] = [
 
 export default function Home() {
   const [current, setCurrent] = useState(1);
+
+  const getRankList = () => {
+    axios.get('/api/rank').then((res) => console.log(res));
+  };
+
+  getRankList();
 
   return (
     <Layout>
